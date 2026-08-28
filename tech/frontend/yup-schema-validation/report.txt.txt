@@ -140,6 +140,7 @@ object
 
       objects come defined with default values "undefined" (use schema.getDefault() to see the default values), this is used to build the entire object
       so unlike other schemas the final value you get after validation is a skeleton
+
       if you validate undefined using a string() schema it will return undefined
       but if you validate undefined using the object schema above above it will return {name: undefined, age: undefined}
 
@@ -152,7 +153,7 @@ object
       this will give us by default {name: undefined, car: {num: undefined}}
 
       Gotcha: 
-        nested optional object() schema like car above, will fails validation when passing {name: "moussa"} although car is optional but it has a required field inside of it "num"
+        nested optional object() schema like car above, will fails validation when passing {name: "moussa"} although car is an optional object but it has a required field inside of it "num"
         be aware of this unexpected behavior
         you can avoid this by providing a default value {car: object(...).default(undefined)} or car: object(...).nullable().default(null)
     shape: 

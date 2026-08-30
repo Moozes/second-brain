@@ -1,0 +1,59 @@
+Roadmap
+    Revisit JavaScript
+    Revisit Python
+
+    Revisit Django Rest Framework
+
+    Level up projects 
+
+    Using AI professionaly and something called "Agentic development"
+
+
+Roadmap execution details
+Make parallel progress in frontend and backend
+    JavaScript
+    - skim through the google docs and the standard library
+    - I need to know a pattern/syntax exists not memorize it
+
+    Python
+    - skim through my syntax cheatsheet 
+
+    DRF
+    - work with serializers in isolation
+    - work with models in isolation
+
+    Using AI professionaly
+    Basic claude code knowledge
+    - modes
+    - models
+    - skills
+    - subagents
+    - strategies to avoid halucinations like (handoff or a checklist)
+    - link with github using "gh cli"
+
+    Level up projects
+    Dockerize all projects (A simple Dockerfile per project)
+    then think of docker-composing two projects (like the http server and the proxy) you can even  spawn multiple http servers to see load balancing in action
+    Use claude code to give you an entire plan of implementation
+    where to start from
+    where to look when you get stuck
+    step by step plan (implement this, then this, then learn this, then apply this ...etc)
+    define checkpoints (a place where you can say I finished something) instead of a single big goal
+    - HTTP server from scracth with TypeScript like "uwsgi" (harder with python because you will need threads and asyncio)
+    - A very minimal proxy with TypeScript
+    - REST API of a CRM or Todo app
+
+
+These will provide a geat backbone for next steps like
+    background jobs with celery
+    chron jobs with celery beat
+    reddis for caching
+
+    understanding the thing that you are ALWAYS working with (HTTP servers)
+
+    understanding deployments (most deployments use reverse proxies + http server)
+    a reverse proxy routes your requests to the http server or handles image download
+    a proxy handles load balancing 
+
+
+

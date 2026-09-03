@@ -8,11 +8,13 @@ Roadmap
 
     Using AI professionaly and something called "Agentic development"
 
+    Rising in demand: Agentic development, MCP server development
+
 
 Roadmap execution details
 Make parallel progress in frontend and backend
     JavaScript
-    - skim through the google docs and the standard library
+    - skim through the google docs and the standard library or MDN reference
     - I need to know a pattern/syntax exists not memorize it
 
     Python
@@ -32,16 +34,19 @@ Make parallel progress in frontend and backend
     - link with github using "gh cli"
 
     Level up projects
-    Dockerize all projects (A simple Dockerfile per project)
+    - HTTP server from scracth with TypeScript like "uwsgi" (harder with python because you will need threads and asyncio)
+    - A very minimal proxy with TypeScript (a logical next step from http server, because a proxy is an http server that forwards requests)
+    - REST API Todo app
+    - After the from-scratch HTTP server and reverse proxy, add a load balancer (round-robin, then weighted) — same mental muscle, one more layer, and it's a natural narrative arc for a portfolio: "server → proxy → load balancer."
+    - A minimal job queue (like a toy Celery) — you already flagged Celery/Redis as a later topic; building one in ~150 lines teaches you what Celery does under the hood way faster than reading docs.
+    - WebSocket chat server from scratch — cheap to build, teaches you a different networking model than HTTP request/response, and is common in CRM-adjacent products (live notifications, presence).
+    Dockerize all projects (A simple Dockerfile per project)    
     then think of docker-composing two projects (like the http server and the proxy) you can even  spawn multiple http servers to see load balancing in action
     Use claude code to give you an entire plan of implementation
     where to start from
     where to look when you get stuck
     step by step plan (implement this, then this, then learn this, then apply this ...etc)
     define checkpoints (a place where you can say I finished something) instead of a single big goal
-    - HTTP server from scracth with TypeScript like "uwsgi" (harder with python because you will need threads and asyncio)
-    - A very minimal proxy with TypeScript
-    - REST API of a CRM or Todo app
 
 
 These will provide a geat backbone for next steps like
@@ -52,7 +57,7 @@ These will provide a geat backbone for next steps like
     understanding the thing that you are ALWAYS working with (HTTP servers)
 
     understanding deployments (most deployments use reverse proxies + http server)
-    a reverse proxy routes your requests to the http server or handles image download
+    a reverse proxy routes your requests to the http server or handles media download
     a proxy handles load balancing 
 
 
